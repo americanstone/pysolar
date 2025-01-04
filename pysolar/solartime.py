@@ -90,6 +90,9 @@ leap_seconds_adjustments = \
       (0, 0),  # 2020
       (0, 0),  # 2021
       (0, 0),  # 2022
+      (0, 0), # 2023
+      (0, 0), # 2024
+      (0, 0), # 2025    
     ]
 
 @check_aware_dt('when')
@@ -111,7 +114,7 @@ def get_leap_seconds(when) :
             ) :
                 warnings.warn \
                   (
-                        "I don't know about leap seconds after %d"
+                        "Leap seconds for year %d are not available for the installed version of pysolar"
                     %
                         (leap_seconds_base_year + len(leap_seconds_adjustments) - 1)
                   )
